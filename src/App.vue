@@ -4,6 +4,7 @@
 
 <script>
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
+import DecoupledEditor from '@ckeditor/ckeditor5-build-decoupled-document/src/ckeditor';
 
 export default {
    name: "App",
@@ -12,20 +13,12 @@ export default {
          editor: ClassicEditor,
          editorData: "<p>Content of the editor.</p>",
          editorConfig: {
+            plugins:[
+               DecoupledEditor
+            ]
             // The configuration of the editor.
          },
       };
    },
 };
 </script>
-
-<style>
-#app {
-   font-family: Avenir, Helvetica, Arial, sans-serif;
-   -webkit-font-smoothing: antialiased;
-   -moz-osx-font-smoothing: grayscale;
-   text-align: center;
-   color: #2c3e50;
-   margin-top: 60px;
-}
-</style>
